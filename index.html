@@ -10,16 +10,44 @@
             background-color: #1a1a1a; 
             color: #ffffff; 
             text-align: center; 
-            padding: 50px; 
-            margin: 0; /* 确保没有多余的边距 */
+            padding: 0; /* 移除body默认内边距 */
+            margin: 0; 
         }
-        h1, h2, a { color: #00ffff; } /* 统一标题和链接颜色 */
-        /* 移除未使用的 .subscription-box 样式 */
+        /* 导航栏样式 */
+        .navbar {
+            display: flex; /* 弹性布局 */
+            justify-content: center; /* 居中对齐 */
+            background-color: #000000; /* 纯黑背景 */
+            padding: 20px 0;
+            border-bottom: 2px solid #00ffff; /* 赛博朋克分割线 */
+        }
+        .navbar a {
+            color: #00ffff; /* 青色链接 */
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 25px;
+            padding: 5px 10px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffffff; /* 鼠标悬停时变白色 */
+        }
+
+        /* 主内容样式 */
+        .main-content {
+            padding: 50px 20px; /* 顶部留出空间 */
+        }
+        h1, h2, a { color: #00ffff; } 
     </style>
 </head>
 <body>
-
-    <div style="text-align: center; padding: 50px 0;">
+    
+    <div class="navbar">
+        <a href="index.html">MAIN INTERFACE (主界面)</a>
+        <a href="exhibition.html">STARBASE ART EXHIBITION (艺术展)</a>
+    </div>
+    <div class="main-content">
         
         <h1 style="color: #00ffff; font-size: 2.8em; margin-bottom: 5px;">
             Welcome to StarbaseGallery!
@@ -29,8 +57,14 @@
             Geniuses, this is where you will be seen.
         </p>
 
-        <p style="font-size: 1.3em; color: #ffffff;">
-            Sign up to get exclusive art:
+        <p style="margin-bottom: 30px;">
+            <a href="exhibition.html" style="color: #ffff00; text-decoration: none; font-weight: bold; font-size: 1.5em; border: 1px solid #ffff00; padding: 10px 20px; border-radius: 5px;">
+                VIEW THE STARBASE ART EXHIBITION
+            </a>
+        </p>
+        
+        <p style="font-size: 1.3em; color: #ffffff; margin-top: 50px;">
+            Or, sign up to get exclusive art:
         </p>
         <p style="margin-top: 10px;">
             <a href="subscribe.html" style="color: #00ffff; text-decoration: none; font-weight: bold; font-size: 1.5em;">
@@ -39,6 +73,5 @@
         </p>
 
     </div>
-    
     </body>
 </html>
